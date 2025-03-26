@@ -27,5 +27,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Tags- ${{ inputs.tags }} logLevel - ${{ inputs.logLevel }} "
+      - run: "echo Tags- ${{ inputs.tags }} logLevel - ${{ inputs.logLevel }} "
 
