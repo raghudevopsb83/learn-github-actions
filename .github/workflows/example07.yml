@@ -9,5 +9,5 @@ jobs:
       - run: |
           #echo "::error Intentional Error::Missing semicolon"
           #exit 1
-          echo "::summary 100 Resources Created ::Missing semicolon"
+          echo "$GITHUB_STEP_SUMMARY"
 
