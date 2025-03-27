@@ -5,10 +5,7 @@ jobs:
 # Sequential jobs
   Test1:
     runs-on: ubuntu-latest
-    id: Test1
     steps:
       - run: |
-          #echo "::error Intentional Error::Missing semicolon"
-          #exit 1
-          echo ${{ job.container.id }} >> $GITHUB_STEP_SUMMARY
+          echo ${{ job.container.id }}
 
