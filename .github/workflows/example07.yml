@@ -1,5 +1,5 @@
 # Fail a pipeline
-name: example05
+name: example07
 on: [push]
 jobs:
 # Sequential jobs
