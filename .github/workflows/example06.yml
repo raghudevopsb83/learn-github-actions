@@ -1,0 +1,6 @@
+name: example06
+on: [push]
+jobs:
+# Sequential jobs
+  call-common:
+    uses: common.yml@main
