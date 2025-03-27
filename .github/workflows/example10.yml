@@ -5,8 +5,8 @@ on: workflow_dispatch
 jobs:
   build1:
     runs-on: ubuntu-latest
-    concurrency:
-      group: build-group
+#     concurrency:
+#       group: build-group
       #cancel-in-progress: true
 
     steps:
@@ -20,8 +20,8 @@ jobs:
 
   build2:
     runs-on: ubuntu-latest
-    concurrency:
-      group: build-group
+#     concurrency:
+#       group: build-group
       #cancel-in-progress: true
 
     steps:
