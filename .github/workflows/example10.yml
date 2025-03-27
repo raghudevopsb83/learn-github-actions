@@ -1,0 +1,44 @@
+name: Build and Deploy
+
+on: workflow_dispatch
+
+jobs:
+  build1:
+    runs-on: ubuntu-latest
+#     concurrency:
+#       group: build-group
+#       cancel-in-progress: true
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build application
+        run: |
+          echo "Building application..."
+
+  build2:
+    runs-on: ubuntu-latest
+#     concurrency:
+#       group: build-group
+#       cancel-in-progress: true
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build application
+        run: |
+          echo "Building application..."
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy application
+        run: |
+          echo "Deploying application..."
+          # Your deploy commands go here
