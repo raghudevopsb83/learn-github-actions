@@ -5,9 +5,9 @@ on: workflow_dispatch
 jobs:
   build1:
     runs-on: ubuntu-latest
-#     concurrency:
-#       group: build-group
-#       cancel-in-progress: true
+    concurrency:
+      group: build-group
+      cancel-in-progress: true
 
     steps:
       - name: Checkout code
@@ -16,12 +16,13 @@ jobs:
       - name: Build application
         run: |
           echo "Building application..."
+          sleep 60
 
   build2:
     runs-on: ubuntu-latest
-#     concurrency:
-#       group: build-group
-#       cancel-in-progress: true
+    concurrency:
+      group: build-group
+      cancel-in-progress: true
 
     steps:
       - name: Checkout code
