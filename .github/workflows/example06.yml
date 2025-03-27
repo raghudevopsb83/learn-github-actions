@@ -3,4 +3,4 @@ on: [push]
 jobs:
 # Sequential jobs
   call-common:
-    uses: common.yml@main
+    uses: .github/workflows/common.yml@main
