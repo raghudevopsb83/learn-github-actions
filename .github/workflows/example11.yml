@@ -8,10 +8,11 @@ jobs:
     strategy:
       matrix:
         fruits: ["apple", "banana", "orange"]
+        animal: [cat, dog]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Print fruits - ${{ matrix.fruits }}
-        run: echo ${{ matrix.fruits }}
+      - name: Print ${{ matrix.fruits }} | ${{ matrix.animal }}
+        run: echo  ${{ matrix.fruits }} ${{ matrix.animal }}
 
