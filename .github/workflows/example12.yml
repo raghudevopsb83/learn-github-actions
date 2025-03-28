@@ -18,7 +18,7 @@ jobs:
       - name: Upload the text file as an artifact
         uses: actions/upload-artifact@v3
         with:
-          name: sample-text-file  # Artifact name
+          name: sample-text-file  # Artifact name (this will be used for downloading)
           path: sample.txt        # File to be uploaded
 
   use-artifact:
@@ -32,8 +32,8 @@ jobs:
       - name: Download the artifact
         uses: actions/download-artifact@v3
         with:
-          name: sample-text-file  # Name of the artifact to download
+          name: sample-text-file  # Ensure this matches the artifact name used during upload
 
       - name: Read the content of the sample text file
         run: |
-          cat sample-text-file/sample.txt
+          cat sample-text-file/sample.txt  # The path will include the artifact folder name
