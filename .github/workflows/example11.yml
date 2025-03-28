@@ -1,0 +1,17 @@
+name: Matrix example
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        fruits: ["apple", "banana", "orange"]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print fruits - ${{ matrix.fruits }}
+        run: echo ${{ matrix.fruits }}
+
