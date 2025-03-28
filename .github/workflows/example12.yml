@@ -1,0 +1,23 @@
+name: Storing and Sharing Data Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create a sample text file
+        run: |
+          echo "This is a sample text file created during the workflow." > sample.txt
+
+      - name: Upload the text file as an artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sample-text-file  # Artifact name
+          path: sample.txt        # File to be uploaded
+
